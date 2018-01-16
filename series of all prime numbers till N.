@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int n,j;
+cin>>n;
+for(j=2;j<=n;j++)
+{
+int c=0,x=j,i;
+for(i=2;i<x;i++)
+{
+if(x%i==0)
+{c++;break;}
+}
+if(c==0)
+cout<<x<<" ";
+}
+return 0;
+}

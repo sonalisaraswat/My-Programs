@@ -1,0 +1,43 @@
+rotate every character in the message by a fixed number
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+string s,q="";
+int n,i,k;
+cin>>s>>k;
+for(i=0;i<s.length();i++)
+{
+n=s[i];
+if(n>=65&&n<=90)
+{
+        n=n+(k%26);
+if(n>90)
+    q=q+(char)(n%90+64);
+else
+    q=q+(char)(n);
+}
+else if(n>=97&&n<=122)
+{
+    n=n+(k%26);
+    if(n>122)
+        q=q+(char)(n%122+96);
+    else
+        q=q+(char)(n);
+}
+else if(n>=48&&n<=57)
+{
+    n=n+(k%10);
+    if(n>57)
+        q=q+(char)(n%57+47);
+    else
+        q=q+(char)(n);
+}
+else
+q=q+s[i];
+}
+cout<<q;
+return 0;
+}

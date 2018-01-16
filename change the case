@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+int i,n;
+string s,q="";
+cin>>s;
+for(i=0;i<s.length();i++)
+{
+n=s[i];
+if(n<=90)
+    q=q+(char)(n+32);
+else
+    q=q+(char)(n-32);
+}
+cout<<q<<endl;
+return 0;
+}

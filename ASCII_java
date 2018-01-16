@@ -1,0 +1,13 @@
+import java.io.*;
+class A
+{
+    public static void main(String args[])throws IOException
+    {
+        char c;
+        int n;
+         BufferedReader in=new  BufferedReader(new  InputStreamReader(System.in));
+         c=(char)in.read();
+         n=c;
+         System.out.println(n);
+    }
+}

@@ -1,0 +1,22 @@
+import java.util.*;
+class Universe
+{
+public static void main(String args[])
+{
+int A[]=new int[10000];
+int i=0,j,f=0;
+Scanner sc=new Scanner(System.in);
+while(f==0)
+{
+	A[i]=sc.nextInt();
+	i++;
+	if(A[i-1]==42)
+	{
+	A[i]=sc.nextInt();
+	f=1;
+    }
+}
+    for(j=0;j<i-1;j++)
+    System.out.println(A[j]);
+}
+}

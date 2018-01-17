@@ -1,0 +1,20 @@
+You are given a string, which contains entirely of decimal digits (0-9). Each digit is made of a certain number of dashes
+count of dashes in the string message.
+
+import java.util.*;
+class Whatstr
+{
+public static void main(String args[])
+{
+int K[]={6,2,5,5,4,5,6,3,7,6};
+int sum=0,i;
+String S;
+Scanner s=new Scanner(System.in);
+S=s.nextLine();
+for(i=0;i<S.length();i++)
+{
+sum=sum+K[(S.charAt(i))-'0'];
+}
+System.out.println(sum);
+}
+}

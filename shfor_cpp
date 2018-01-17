@@ -1,0 +1,58 @@
+tell me whether this string is a concatenation of "k" palindromic strings of equal length or not. 
+
+#include <iostream>
+#include <string>
+using namespace std;
+int palin(string,int,int);
+int main()
+{
+    int t;cin>>t;
+    while(t>0)
+    {
+        string s;
+        int k,n;
+        cin>>s>>k;
+        if(s.length()%k!=0)
+            cout<<"NO"<<endl;
+        else
+        {
+            int flag=1,i;
+            n=s.length()/k;
+            for(i=0;i<=(s.length())-n;i+=n)
+            {
+                int re=palin(s,i,i+n);
+                 if(re!=1)
+                {
+                    flag=2;break;
+                }
+            }
+            if(flag==2)
+                cout<<"NO"<<endl;
+            else
+                cout<<"YES"<<endl;
+        }
+        t--;
+    }
+    return 0;
+}
+int palin(string s,int f,int l)
+{
+    int fl=1,j=l-1,i=f;
+    for(i=f;i<=(f+l)/2;i++)
+    {
+        if(s[i]==s[j])
+        {
+            ;
+        }
+
+        else
+        {
+            fl=2;break;
+        }
+        j--;
+    }
+    if(fl==2)
+        return 2;
+    else
+        return 1;
+}

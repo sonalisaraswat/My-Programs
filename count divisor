@@ -1,0 +1,18 @@
+ given 3 integers - l, r and k. Find how many numbers between l and r (both inclusive) are divisible by k
+ 
+ #include <iostream>
+using namespace std;
+int main()
+{
+int i,r,k;
+cin>>i>>r>>k;
+if(i<=k)
+cout<<(r/k);
+else
+{
+    if(i%k==0)
+cout<<((r-i)/k)+1;
+else cout<<((r-i)/k);
+}
+return 0;
+}

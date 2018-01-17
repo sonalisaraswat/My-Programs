@@ -1,0 +1,25 @@
+Find the sum of all the multiples of 3 or 5 below N
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int t;
+cin>>t;
+while(t>0)
+{
+long N,sum=0,i,j,k;
+cin>>N;
+i=(N-1)/3;
+j=(N-1)/5;
+sum=sum+(i*(2*3+((i-1)*3)))/2;
+
+sum=sum+(j*(2*5+((j-1)*5)))/2;
+
+k=(N-1)/15;
+sum=sum-(k*(2*15+((k-1)*15)))/2;
+cout<<sum<<endl;
+t--;
+}
+return 0;
+}

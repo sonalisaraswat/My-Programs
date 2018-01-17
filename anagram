@@ -1,0 +1,40 @@
+determine the minimum number of character deletions required to make a and b anagrams
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+int test;
+cin>>test;
+while(test>0)
+{
+string a,b,t="";
+int i=0,al=0,bl=0,tn=0;
+cin>>a>>b;
+al=a.length();
+bl=b.length();
+int sum=al+bl;
+if(al<=bl)
+;
+else
+{
+tn=al;al=bl;bl=tn;
+t=a;a=b;b=t;
+}
+int j=0;
+tn=0;
+while(j<al)
+{
+for(i=0;i<bl;i++)
+{
+if(a[j]==b[i])
+{tn+=2;b[i]='0';break;}
+}
+j++;
+}
+cout<<(sum-tn)<<endl;
+test--;
+}
+return 0;
+}

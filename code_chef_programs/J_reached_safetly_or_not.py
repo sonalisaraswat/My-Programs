@@ -3,8 +3,7 @@ for t in range(int(input())):
     rx,ry = [int(k) for k in input().split()]
     num=int(input())
     s=input()
-    x=0
-    y=0
+    x=y=0
     for i in range(num):
         if s[i]=='L':
             x-=1

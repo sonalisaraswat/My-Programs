@@ -1,6 +1,5 @@
 for t in range(int(input())):
-    fro=0
-    bac=0
+    fro=bac=0
     n=int(input())
     a = [int(j) for j in input().split()]
     g = [int(k) for k in input().split()]
@@ -21,4 +20,3 @@ for t in range(int(input())):
         print("back")
     else:
         print("none")
-
